@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view("/{any?}", "index")
+    ->where("any", ".*")
+    ->where('any', '^(?!api).*');
