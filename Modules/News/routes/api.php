@@ -14,6 +14,10 @@ use Modules\News\Http\Controllers\NewsController;
  *
 */
 
-Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
-    Route::apiResource('news', NewsController::class)->names('news');
+Route::prefix('v1')->group(function () {
+
+    // News routes
+    Route::get('', [NewsController::class, 'index'])->name('news.index');
+
+
 });
