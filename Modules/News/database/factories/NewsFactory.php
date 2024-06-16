@@ -18,7 +18,7 @@ class NewsFactory extends Factory
             'title'             => $title,
             'url'               => Str::slug($title),
             'short_description' => $this->faker->text(50),
-            'description'       => $this->faker->paragraphs(3, true),
+            'description'       => $this->faker->paragraphs(30, true),
             'status'            => NewsStatus::ACTIVE->value,
             'created_at'        => $this->faker->dateTimeThisMonth,
             'updated_at'        => now(),

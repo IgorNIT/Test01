@@ -1,6 +1,7 @@
 import App from './App.vue';
 import { createApp } from 'vue'
 import './assets/global.css'
+import API from './api/API.js'
 
 // APP
 const app = createApp(App)
@@ -15,9 +16,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import routes from './routes';
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes
 })
+
 app.use(router)
 
 app.mount('#app')

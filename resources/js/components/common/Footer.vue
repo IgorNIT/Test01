@@ -14,6 +14,7 @@
 
 .el-footer {
     position: fixed;
+    z-index: 2;
     background-color: var(--el-color-primary-dark-2);
     bottom: 0;
     left: 0;

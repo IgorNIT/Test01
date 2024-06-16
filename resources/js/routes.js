@@ -1,31 +1,25 @@
-import Blog from './pages/News.vue';
+import News from './pages/News.vue';
+import NewsItem from  './pages/NewsItem.vue';
+import Page404 from  './pages/Page404.vue';
 
 const routes =  [
     {
         path: '/',
         name: 'News',
-        component: News
-    },
-   /* {
-        path: '/:admin/companies/index/edit/:id',
-        name: 'CompanyEdit',
-        component: CompanyEdit
+        component: News,
     },
     {
-        path: '/:admin/companies/index/employees/:id',
-        name: 'CompanyEmployees',
-        component: CompanyEmployees
+        path: '/:url',
+        name: 'NewsItem',
+        component: NewsItem
     },
     {
-        path: '/:admin/companies/registration-requests/:id',
-        name: 'CompanyRegistration',
-        component: CompanyRegistration
+        path: '/404',
+        name: '404',
+        component: Page404
     },
-    {
-        path: '/:admin/companies/employee-registration-requests/:id',
-        name: 'CompanyEmployeeRegistration',
-        component: CompanyEmployeeRegistration
-    },*/
 ];
+
+
 
 export default routes;

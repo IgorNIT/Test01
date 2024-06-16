@@ -14,10 +14,13 @@ use Modules\News\Http\Controllers\NewsController;
  *
 */
 
-Route::prefix('v1')->group(function () {
+Route::prefix('v1/news')->group(function () {
 
     // News routes
     Route::get('', [NewsController::class, 'index'])->name('news.index');
+    Route::get('/item/{slug}', [NewsController::class, 'show'])->name('news.show');
+    Route::put('/item/{id}/change-status', [NewsController::class, 'changeStatus'])->name('news.change-status');
 
-
+    // News Options
+    Route::get('/options', [NewsController::class, 'options'])->name('news.options');
 });
