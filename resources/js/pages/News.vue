@@ -29,6 +29,7 @@
                 </el-col>
             </el-row>
             <Bootstrap5Pagination
+                :limit="4"
                 @pagination-change-page="getData"
                 :data="news"></Bootstrap5Pagination >
         </div>
